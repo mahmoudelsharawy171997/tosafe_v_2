@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:tosafe_v_2/classes/title.dart';
 import 'package:tosafe_v_2/globalElements.dart';
 import 'package:tosafe_v_2/widgets/notifiedAppBar.dart';
 
@@ -101,9 +102,9 @@ class _maintainanceReportState extends State<maintainanceReport> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   title(content: 'Select the branch'),
-                  contentStyle1(content: 'Branch name',),
+                  contentStyle(content: 'Branch name',style: style1,edgeInsets: edgeInsets1,),
                   title(content: 'Type of visit'),
-                  contentStyle1(content: 'Type of visit',),
+                  contentStyle(content: 'Type of visit',style: style1,edgeInsets: edgeInsets1,),
                   title(content: 'Select time and date'),
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 15),
@@ -122,11 +123,11 @@ class _maintainanceReportState extends State<maintainanceReport> {
                     ),
                   ),
                   title(content: 'Type of system'),
-                  contentStyle2(content: 'It is a long established fact that a reader will ',),
+                  contentStyle(content: 'It is a long established fact that a reader will ',style: style2,edgeInsets: edgeInsets2,),
                   title(content: 'Problem description'),
-                  contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop.',),
+                  contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop.',style: style2,edgeInsets: edgeInsets2,),
                   title(content: 'Problem solution'),
-                  contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',),
+                  contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',style: style2,edgeInsets: edgeInsets2,),
                   title(content: 'Spare parts used'),
 
                 ],

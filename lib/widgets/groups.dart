@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tosafe_v_2/classes/subTitle.dart';
 import 'package:tosafe_v_2/globalElements.dart';
 
 

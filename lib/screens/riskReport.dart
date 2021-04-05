@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:tosafe_v_2/classes/horizontalListViewWithdata.dart';
 import 'package:tosafe_v_2/classes/repliesOnReport.dart';
+import 'package:tosafe_v_2/classes/subTitle.dart';
+import 'package:tosafe_v_2/classes/title.dart';
 import 'package:tosafe_v_2/globalElements.dart';
 import 'package:tosafe_v_2/widgets/notifiedAppBar.dart';
 
@@ -16,7 +19,6 @@ class _riskReportState extends State<riskReport> {
   Widget build(BuildContext context) {
     int _counter = 10;
     int counter2=6;
-    bool valuesecond = false;
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(

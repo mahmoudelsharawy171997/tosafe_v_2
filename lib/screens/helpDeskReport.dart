@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tosafe_v_2/classes/horizontalListViewWithdata.dart';
+import 'package:tosafe_v_2/classes/title.dart';
 import 'package:tosafe_v_2/globalElements.dart';
 import 'package:tosafe_v_2/widgets/notifiedAppBar.dart';
 
@@ -99,11 +101,11 @@ class _helpDeskReportState extends State<helpDeskReport> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   title(content: 'The branch'),
-                  contentStyle1(content: 'Branch name',),
+                  contentStyle(content: 'Branch name',style: style1,edgeInsets: edgeInsets1,),
                   title(content: 'Details of report'),
-                  contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to ',),
+                  contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to ',style: style2,edgeInsets: edgeInsets2,),
                   title(content: 'The entity'),
-                  contentStyle1(content: 'Technology Center 1',),
+                  contentStyle(content: 'Technology Center 1',style: style1,edgeInsets: edgeInsets1,),
                   title(content: 'Pictures and videos'),
                   horizontalListViewWithdata(),
 

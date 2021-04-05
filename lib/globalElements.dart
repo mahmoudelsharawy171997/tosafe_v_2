@@ -4,7 +4,6 @@ import 'package:intl/intl.dart';
 import 'package:tosafe_v_2/widgets/sideMenuCard.dart';
 
 DateTime now = DateTime.now();
-//var date = DateTime(now.year, now.month , now.day);
 String formattedDate = DateFormat('dd - MM - yyyy  h:mm a').format(now);
 String formattedDateEndPage = DateFormat('dd - MM - yyyy').format(now);
 String formattedDateHeaderPage = DateFormat('dd  MMM  yyyy Report').format(now);
@@ -44,13 +43,13 @@ List<ListItem> dropdownItems = [
   ListItem(4, "Fourth Item")
 ];
 
-Color mainColor=Color.fromRGBO(17, 169, 157, 1);
-Color mainColor2=Color.fromRGBO(17, 169, 157, 0.1);
-Color mainColor3=Color.fromRGBO(17, 169, 157, 0.2);
-Color redColor=Color.fromRGBO(243, 24, 77, 1);
-Color redColor2=Color.fromRGBO(243, 24, 77, 0.1);
-Color greenColor=Color.fromRGBO(141, 197, 62, 1);
-Color greenColor2=Color.fromRGBO(141, 197, 62, 0.1);
+const Color mainColor=Color.fromRGBO(17, 169, 157, 1);
+const Color mainColor2=Color.fromRGBO(17, 169, 157, 0.1);
+const Color mainColor3=Color.fromRGBO(17, 169, 157, 0.2);
+const Color redColor=Color.fromRGBO(243, 24, 77, 1);
+const Color redColor2=Color.fromRGBO(243, 24, 77, 0.1);
+const Color greenColor=Color.fromRGBO(141, 197, 62, 1);
+const Color greenColor2=Color.fromRGBO(141, 197, 62, 0.1);
 
 class ListItem {
   int value;
@@ -58,28 +57,6 @@ class ListItem {
 
   ListItem(this.value, this.name);
 }
-
-class horizontalListView extends StatelessWidget {
-  horizontalListView({@required this.centerText});
-  String centerText;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 220,
-      margin: EdgeInsets.symmetric(vertical: 10),
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          horizontalItem(centerText: centerText,),
-          horizontalItem(centerText: centerText,),
-          horizontalItem(centerText: centerText,),
-        ],
-      ),
-    );
-  }
-}
-
-
 
 void cancelReport(context){
   showModalBottomSheet(
@@ -143,117 +120,7 @@ void endReport(context){
   );
 }
 
-class horizontalItem extends StatelessWidget {
-  horizontalItem({@required this.centerText});
-  String centerText;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 40, bottom: 40, right: 45, left: 45),
-      margin: EdgeInsets.only(top: 10, bottom: 5, right: 10),
-      width: 190,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey[300]),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        children: [
-          Image.asset('images/noun_Camera.png'),
-          Text(
-            centerText,
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.grey[500]),
-          )
-        ],
-      ),
-    );
-  }
-}
 
-class horizontalListViewWithdata extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 320,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          horizontalItemWithData(imageName: 'images/Group2/2KIG3VfOUk.png',),
-          horizontalItemWithData(imageName: 'images/Group2/b2Y38Aovxo.png',),
-          horizontalItemWithData(imageName: 'images/Group2/Cv8YYm0Vqd.png',),
-        ],
-      ),
-    );
-  }
-}
-
-class horizontalItemWithData extends StatelessWidget {
-  horizontalItemWithData({@required this.imageName});
-  final String imageName;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 10, bottom: 5, right: 10),
-      height: 319,
-      width: 200,
-      alignment: Alignment.bottomLeft,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: mainColor,
-      ),
-      child: Stack(
-        children: [
-          Column(
-            children: [
-              Container(
-                height: 190,
-                width: double.infinity,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                child: Image.asset(imageName,fit: BoxFit.fill,),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 15,left: 20,right: 20,bottom: 20),
-                child: Text(
-                  'This place will be to show comment on this picture',
-                  style: TextStyle(color: Colors.white,fontSize: 20,height: 1),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class subTitle extends StatelessWidget {
-  const subTitle({@required this.content});
-  final String content;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 10,top: 10),
-      padding: EdgeInsets.only(top: 10,right: 25,left: 25,bottom: 10),
-      decoration: BoxDecoration(color: Colors.grey[300],borderRadius: BorderRadius.circular(15)),
-      child: Text(content,style: TextStyle(fontSize: 20,),),
-    );
-  }
-}
-
-class title extends StatelessWidget {
-  const title({@required this.content});
-  final String content;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.only(top: 10,right: 25,left: 25,bottom: 10),
-      decoration: BoxDecoration(color: mainColor2,borderRadius: BorderRadius.circular(10)),
-      child: Text(content,style: TextStyle(color: mainColor,fontSize: 20,),),
-    );
-  }
-}
 
 class pictureAndComment extends StatelessWidget {
   @override
@@ -380,26 +247,21 @@ class pictureWithData extends StatelessWidget {
   }
 }
 
-class contentStyle1 extends StatelessWidget {
-  const contentStyle1({@required this.content});
-  final String content;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 10,bottom: 20),
-      child: Text(content,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-    );
-  }
-}
+TextStyle style1=TextStyle(fontSize: 20,fontWeight: FontWeight.bold);
+TextStyle style2=TextStyle(fontSize: 20,);
+EdgeInsets edgeInsets1=EdgeInsets.only(top: 10,bottom: 20);
+EdgeInsets edgeInsets2=EdgeInsets.only(top: 15,bottom: 15,right: 5,left: 10);
 
-class contentStyle2 extends StatelessWidget {
-  const contentStyle2({@required this.content});
+class contentStyle extends StatelessWidget {
+  const contentStyle({@required this.content,@required this.style,@required this.edgeInsets,});
   final String content;
+  final TextStyle style;
+  final EdgeInsets edgeInsets;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 15,bottom: 15,right: 5,left: 10),
-      child: Text(content,style: TextStyle(fontSize: 20,),),
+      padding: edgeInsets1,
+      child: Text(content,style: style1,),
     );
   }
 }

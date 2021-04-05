@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:tosafe_v_2/classes/title.dart';
 import 'package:tosafe_v_2/globalElements.dart';
 import 'package:tosafe_v_2/widgets/notifiedAppBar.dart';
 
@@ -46,13 +47,13 @@ class incidentsReport extends StatelessWidget {
               ),
             ),
             title(content: 'Branch name'),
-            contentStyle1(content: 'Branch name',),
+            contentStyle(content: 'Branch name',style: style1,edgeInsets: edgeInsets1,),
             title(content: 'Title'),
-            contentStyle1(content: 'Title of incident',),
+            contentStyle(content: 'Title of incident',style: style1,edgeInsets: edgeInsets1,),
             title(content: 'I am reporting about'),
-            contentStyle1(content: 'Injury',),
+            contentStyle(content: 'Injury',style: style1,edgeInsets: edgeInsets1,),
             title(content: 'Have you told your manager about this Incident ?'),
-            contentStyle1(content: 'Yes',),
+            contentStyle(content: 'Yes',style: style1,edgeInsets: edgeInsets1,),
             title(content: 'Select time and date'),
             Container(
               padding: EdgeInsets.symmetric(vertical: 15),
@@ -71,21 +72,21 @@ class incidentsReport extends StatelessWidget {
               ),
             ),
             title(content: 'Names of witnesses ( If any )'),
-            contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',),
+            contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',style: style2,edgeInsets: edgeInsets2,),
             title(content: 'Where exactly , did it happen ?'),
-            contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',),
+            contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',style: style2,edgeInsets: edgeInsets2,),
             title(content: 'What were you doing at the time ? '),
-            contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',),
+            contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',style: style2,edgeInsets: edgeInsets2,),
             title(content: 'Provide a detailed descriptions of incident'),
-            contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it ',),
+            contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it ',style: style2,edgeInsets: edgeInsets2,),
             title(content: 'What could have been done to prevent this incident from happening ? '),
-            contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',),
+            contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',style: style2,edgeInsets: edgeInsets2,),
             title(content: 'What was your immediate action when this incident happened ?'),
-            contentStyle2(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',),
+            contentStyle(content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.',style: style2,edgeInsets: edgeInsets2,),
             title(content: 'Did anyone suffer a injury resulting from this incident ? '),
-            contentStyle1(content: 'Yes',),
+            contentStyle(content: 'Yes',style: style1,edgeInsets: edgeInsets1,),
             title(content: 'Chance of the near miss , incident or accident recurring'),
-            contentStyle1(content: 'One off',),
+            contentStyle(content: 'One off',style: style1,edgeInsets: edgeInsets1,),
             title(content: 'Your signature'),
             Container(margin: EdgeInsets.only(bottom: 20,top: 20),child: Text('Khaled Mohsen',style: TextStyle(fontSize: 25),)),
             bottomFlatButton(title: 'Cancel Report',color: redColor,onpress: () {
